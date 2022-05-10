@@ -239,7 +239,7 @@ return packer.startup(function(use)
   --   "kevinhwang91/nvim-hlslens", -- highlight search
   --   disable = true,
   -- }
-  -- use "kevinhwang91/nvim-bqf" -- better quick fix, use trouble instead
+  use "kevinhwang91/nvim-bqf" -- better quick fix
   -- use "RRethy/vim-illuminate" -- highlight undercursor word
   -- use "lewis6991/spellsitter.nvim" -- spell checker
   use "folke/todo-comments.nvim" -- todo comments
@@ -278,7 +278,6 @@ return packer.startup(function(use)
   -- use "ravenxrz/DoxygenToolkit.vim"
   use "Pocco81/AutoSave.nvim"
   use "djoshea/vim-autoread"
-  use "jonstoler/werewolf.vim"
 
 
   -- Automatically set up your configuration after cloning packer.nvim

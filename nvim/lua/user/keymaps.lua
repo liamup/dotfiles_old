@@ -43,7 +43,7 @@ keymap("n", "<leader>q", ":q<cr>", opts)
 keymap("n", "<leader>d", ":bdelete<cr>", opts)
 keymap("n", "<leader>D", ":bdelete<cr>", opts)
 -- exit whole program
-keymap("n", "ZZ", ":lua require('user.utils').SaveAndExit()<cr>", opts)
+keymap("n", "ZZ", ":wa<CR> | :qa<CR>", opts)
 -- remap macro record key
 keymap("n", "Q", "q", opts)
 -- cancel q
@@ -141,7 +141,7 @@ keymap("n", "K", "<cmd>lua require'dapui'.eval()<cr>", opts)
 
 -- git diff view
 keymap('n', '<leader>j', ']c', opts)
-keymap('n', '<leader>k','[c', opts)
+keymap('n', '<leader>k', '[c', opts)
 
 
 -- unit test
@@ -155,15 +155,14 @@ keymap("n", "gcf", "<cmd>Dox<cr>", opts)
 keymap("n", "<leader>rf", ":%SnipRun<cr>", opts)
 keymap("v", "<leader>rs", ":%SnipRun<cr>", opts)
 
--- for spell check
+-- spell check
 vim.cmd(
 [[
   nnoremap <leader>s :call search('\w\>', 'c')<CR>a<C-X><C-S>
 ]])
 
-
--- for gtags
+-- gtags
 -- find functions calling this function
-keymap("n", "<leader>U", ":cs find c <C-R>=expand('<cword>')<CR><CR>", opts)
+keymap("n", "<leader>U", ":lua require('user.utils').GtagsRefernce()<cr>", opts)
 -- find definition
-keymap("n", "<leader>T", ":cs find g <C-R>=expand('<cword>')<CR><CR>", opts)
+keymap("n", "<leader>T", ":lua require('user.utils').GtagsText()<cr>", opts)
