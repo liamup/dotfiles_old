@@ -6,7 +6,6 @@
 -- Ctrl+\ i    Find files #including this file
 -- Ctrl+\ s    Find this C symbol
 -- Ctrl+\ t    Find this text string
-print("gen_tags")
 vim.cmd(
 [[
   let g:loaded_gentags#ctags = 1
