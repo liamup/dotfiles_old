@@ -240,7 +240,7 @@ return packer.startup(function(use)
   --   disable = true,
   -- }
   use "kevinhwang91/nvim-bqf" -- better quick fix
-  -- use "RRethy/vim-illuminate" -- highlight undercursor word
+  use "RRethy/vim-illuminate" -- highlight undercursor word
   -- use "lewis6991/spellsitter.nvim" -- spell checker
   use "folke/todo-comments.nvim" -- todo comments
   -- use "liuchengxu/vista.vim"     -- outline
