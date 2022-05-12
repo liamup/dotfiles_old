@@ -1,7 +1,5 @@
 local M = {}
 
--- this function is deprecated
--- NOTE: use | to execute multiple commands instead
 M.SaveAndExit = function()
     -- wirte all buffer first
     vim.api.nvim_command(":wa")

@@ -43,7 +43,7 @@ keymap("n", "<leader>q", ":q<cr>", opts)
 keymap("n", "<leader>d", ":bdelete<cr>", opts)
 keymap("n", "<leader>D", ":bdelete<cr>", opts)
 -- exit whole program
-keymap("n", "ZZ", ":wa<CR> | :qa<CR>", opts)
+keymap("n", "ZZ", ":lua require('user.utils').SaveAndExit()<cr>", opts)
 -- remap macro record key
 keymap("n", "Q", "q", opts)
 -- cancel q
@@ -142,7 +142,6 @@ keymap("n", "K", "<cmd>lua require'dapui'.eval()<cr>", opts)
 -- git diff view
 keymap('n', '<leader>j', ']c', opts)
 keymap('n', '<leader>k', '[c', opts)
-
 
 -- unit test
 keymap("n", "<leader>rr", "<cmd>UltestNearest<cr>", opts)
