@@ -154,7 +154,7 @@ bin目录下的文件是一些依赖可执行文件，如果通过 `install` 命
 
 **3.终端颜色有问题?**
 
-> mac建议使用iterm2, 或者kittiy， 不建议使用默认终端。
+> mac建议使用iterm2, 或者kitty， 不建议使用默认终端。
 
 确认终端支持真彩色, 另外将 $TERM 环境变量设为 `xterm-256color`. 
 
@@ -182,3 +182,11 @@ packer插件自动下载失败，网络问题。遇到此问题，可手动清�
 
 - makefile管理的项目： 使用 bear 工具（开源工具，自行下载），然后在项目工程下执行 `bear -- make` 
 - cmake管理的项目： 使用快捷键 `<space> + cg`
+
+**9. failed loading telescope.lua**
+
+确保所有插件安装均安装完成，如仍有该错误，打开telescope.lua, 注释掉最后几行的 `load_extesion(xxx)`
+
+**10. wsl nvim启动速度极慢，超过2s**
+
+确保wsl版本为wsl2。
