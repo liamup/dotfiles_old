@@ -185,7 +185,7 @@ packer插件自动下载失败，网络问题。遇到此问题，可手动清�
 
 **9. failed loading telescope.lua**
 
-确保所有插件安装均安装完成，如仍有该错误，打开telescope.lua, 注释掉最后几行的 `load_extesion(xxx)`
+确保所有插件均安装完成，如仍有该错误，打开telescope.lua, 注释掉最后几行的 `load_extesion(xxx)`
 
 **10. wsl nvim启动速度极慢，超过2s**
 
