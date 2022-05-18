@@ -1,6 +1,6 @@
 [
 	{ // make cursor back to editor
-		"key": "ctrl+c",
+		"key": "ctrl+shift+c",
 		"command": "workbench.action.focusActiveEditorGroup",
 		"when": "!terminalFocus"
 	},
@@ -67,7 +67,7 @@
 			"when": "sideBarVisible && explorerViewletVisible"
 		},
 	},
-	{ // open file expoler use which key
+	{ // open outline use which key
 		"key": "o",
 		"command": "whichkey.triggerKey",
 		"when": "whichkeyVisible && outlinerExplorerView.active && view.outline.visible",
@@ -106,11 +106,6 @@
 		"command": "selectPrevSuggestion",
 		"when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
 	},
-	{ // move down at quick open
-		"key": "ctrl+j",
-		"command": "workbench.action.quickOpenNavigateNext",
-		"when": "inQuickOpen"
-	},
 	{ // move up at quick open
 		"key": "ctrl+k",
 		"command": "workbench.action.quickOpenNavigatePrevious",
@@ -130,11 +125,6 @@
 		"key": "tab",
 		"command": "selectNextSuggestion",
 		"when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
-	},
-	{
-		"key": "tab",
-		"command": "workbench.action.quickOpenNavigateNext",
-		"when": "inQuickOpen"
 	},
 	{
 		"key": "shift+tab",
@@ -249,11 +239,6 @@
 		"key": "ctrl+r",
 		"command": "-editor.action.startFindReplaceAction",
 		"when": "editorFocus || editorIsOpen"
-	},
-	{ // lookup api using dash/zeal
-		"key": "shift+k",
-		"command": "extension.dash.specific",
-		"when": "editorTextFocus"
 	},
 	{ // quit side bar only when explore is focused
 		"key": "q",
@@ -500,5 +485,24 @@
 	{
 		"key": "alt+backspace",
 		"command": "git.stageChange"
+	},
+	{
+		"key": "ctrl+n",
+		"command": "editor.action.triggerParameterHints",
+		"when": "editorHasSignatureHelpProvider && editorTextFocus"
+	},
+	{
+		"key": "ctrl+m",
+		"command": "-editor.action.toggleTabFocusMode"
+	},
+	{
+		"key": "tab",
+		"command": "-insertBestCompletion",
+		"when": "atEndOfWord && textInputFocus && !hasOtherSuggestions && !inSnippetMode && !suggestWidgetVisible && config.editor.tabCompletion == 'on'"
+	},
+	{
+		"key": "tab",
+		"command": "-insertNextSuggestion",
+		"when": "hasOtherSuggestions && textInputFocus && !inSnippetMode && !suggestWidgetVisible && config.editor.tabCompletion == 'on'"
 	}
 ]

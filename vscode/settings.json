@@ -60,6 +60,7 @@
 	"debug.console.fontSize": 16,
 	"diffEditor.maxComputationTime": 0,
 	"diffEditor.wordWrap": "off",
+	"diffEditor.ignoreTrimWhitespace": false,
 	"doxdocgen.generic.authorEmail": "zhang.xingrui@foxmail.com",
 	"doxdocgen.generic.authorName": "raven",
 	"editor.cursorSurroundingLines": 8,
@@ -81,8 +82,7 @@
 	"editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
 	"errorLens.enabled": true,
 	"errorLens.enabledDiagnosticLevels": [
-		"error",
-		"warning"
+		"error"
 	],
 	"explorer.confirmDelete": false,
 	"explorer.confirmDragAndDrop": false,
@@ -197,7 +197,15 @@
 			"commands": [
 				"whichkey.show"
 			]
-		}
+		},
+		{
+			"before": [
+				"K"
+			],
+			"commands": [
+				"extension.dash.specific"
+			]
+		},
 	],
 	"vim.normalModeKeyBindingsNonRecursive": [
 		{
@@ -503,8 +511,10 @@
 	],
 	"window.zoomLevel": -1,
 	"workbench.colorTheme": "Catppuccin",
+	"workbench.colorTheme": "Visual Studio Light - C++",
 	"workbench.iconTheme": "vscode-icons",
 	"workbench.list.automaticKeyboardNavigation": false,
-	"workbench.panel.defaultLocation": "right",
-	"workbench.startupEditor": "newUntitledFile"
+	"workbench.panel.defaultLocation": "bottom",
+	"workbench.startupEditor": "newUntitledFile",
+	"go.enableCodeLens": {}
 }
