@@ -1,13 +1,9 @@
-local starts_with = function(str, start)
-  return str:sub(1, #start) == start
-end
-
-local ends_with = function(str, ending)
-  return ending == "" or str:sub(- #ending) == ending
-end
 
 
 local M = {}
+
+-- local starts_with = require("user.utils").starts_with
+local ends_with = require("user.utils").ends_with
 
 M.setup = function()
   local config_dir = vim.fn.stdpath('config') .. '/lua/user/conf'
