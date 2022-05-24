@@ -15,7 +15,7 @@ M.setup = function()
     "auto-session",
     "vim-illuminate",
     "vista",
-    "symbols-outline",
+    "aerial",
     "nvim-gps",
     "tabout",
     "hlargs",

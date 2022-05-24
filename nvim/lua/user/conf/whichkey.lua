@@ -116,7 +116,7 @@ local mappings = {
   },
 
   ["o"] = {
-    "<cmd>AerialToggle<CR>", "Outline"
+    "<cmd>SymbolsOutline<CR>", "Outline"
   },
   ["v"] = {
     "<cmd>lua require('telescope').extensions.neoclip.default(require('telescope.themes').get_ivy())<cr>",

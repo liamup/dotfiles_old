@@ -84,7 +84,7 @@ M.on_attach = function(client, bufnr)
   -- lsp_highlight_document(client)  -- use RRethy/vim-illuminate instead
 
   -- add outline support for evey lanuage
-  require("aerial").on_attach(client, bufnr)
+  -- require("aerial").on_attach(client, bufnr)
   require "lsp_signature".on_attach()
 end
 

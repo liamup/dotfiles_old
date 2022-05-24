@@ -196,7 +196,6 @@ return packer.startup(function(use)
   }
   use "theHamsta/nvim-dap-virtual-text"
   use "rcarriga/nvim-dap-ui"
-  -- use "nvim-telescope/telescope-file-browser.nvim"
   -- use "mfussenegger/nvim-dap-python"    -- debug python
   -- use { "leoluz/nvim-dap-go", module = "dap-go" } -- debug golang
   -- use { "jbyuki/one-small-step-for-vimkind", module = "osv" } -- debug any Lua code running in a Neovim instance
@@ -245,8 +244,8 @@ return packer.startup(function(use)
   -- use "lewis6991/spellsitter.nvim" -- spell checker
   use "folke/todo-comments.nvim" -- todo comments
   -- use "liuchengxu/vista.vim"     -- outline
-  -- use "simrat39/symbols-outline.nvim" -- outline
-  use "stevearc/aerial.nvim"
+  use "simrat39/symbols-outline.nvim" -- outline
+  -- use "stevearc/aerial.nvim"
   use "norcalli/nvim-colorizer.lua" -- show color
   use "folke/trouble.nvim"
   use "j-hui/fidget.nvim" -- show lsp progress
