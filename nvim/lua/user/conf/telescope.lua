@@ -83,13 +83,13 @@ telescope.setup {
     prompt_prefix = " ",
     selection_caret = " ",
     path_display = {
-      shorten= {
+      shorten = {
         -- e.g. for a path like
         --   `alpha/beta/gamma/delta.txt`
         -- setting `path_display.shorten = { len = 1, exclude = {1, -1} }`
         -- will give a path like:
         --   `alpha/b/g/delta.txt`
-        len = 3, exclude = {1, -1}
+        len = 3, exclude = { 1, -1 }
       },
     },
 
@@ -163,7 +163,7 @@ telescope.setup {
       theme = "dropdown",
       previewer = false,
       -- find_command = { "find", "-type", "f" },
-      find_command = {"fd"},
+      find_command = { "fd" },
     },
 
     -- Default configuration for builtin pickers goes here:
@@ -190,10 +190,10 @@ telescope.setup {
     -- !^music	inverse-prefix-exact-match	Items that do not start with music
     -- !.mp3$	inverse-suffix-exact-match	Items that do not end with .mp3
     fzf = {
-      fuzzy = true,                    -- false will only do exact matching
-      override_generic_sorter = true,  -- override the generic sorter
-      override_file_sorter = true,     -- override the file sorter
-      case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
+      fuzzy = true, -- false will only do exact matching
+      override_generic_sorter = true, -- override the generic sorter
+      override_file_sorter = true, -- override the file sorter
+      case_mode = "smart_case", -- or "ignore_case" or "respect_case"
       -- the default case_mode is "smart_case"
     },
     ["ui-select"] = {
@@ -201,6 +201,9 @@ telescope.setup {
         -- even more opts
       }
     },
+    live_grep_raw = {
+      auto_quoting = false, -- enable/disable auto-quoting
+    }
   },
 }
 
@@ -209,4 +212,5 @@ telescope.load_extension('fzf')
 telescope.load_extension("ui-select")
 telescope.load_extension('dap')
 telescope.load_extension('vim_bookmarks')
+telescope.load_extension("live_grep_raw")
 -- load project extension. see project.lua file

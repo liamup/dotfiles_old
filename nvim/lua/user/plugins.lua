@@ -97,7 +97,7 @@ return packer.startup(function(use)
   --   requires = {"tami5/sqlite.lua"}   -- NOTE: need to install sqlite lib
   -- }
   use "nvim-telescope/telescope-ui-select.nvim"
-  use "nvim-telescope/telescope-live-grep-raw.nvim"
+  use "nvim-telescope/telescope-rg.nvim"
   use "MattesGroeger/vim-bookmarks"
   use "tom-anders/telescope-vim-bookmarks.nvim"
   use "nvim-telescope/telescope-dap.nvim"
