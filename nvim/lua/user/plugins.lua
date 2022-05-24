@@ -251,8 +251,14 @@ return packer.startup(function(use)
   use "j-hui/fidget.nvim" -- show lsp progress
   use "sindrets/winshift.nvim" -- rerange window layout
   -- litee family
-  use "ldelossa/litee.nvim"
-  use "ldelossa/litee-calltree.nvim"
+  use { 
+    "ldelossa/litee.nvim",
+    commit = "47235cb807a83af866e06ce654b28efcfe347c60"
+  }
+  use { 
+    "ldelossa/litee-calltree.nvim",
+    commit = "3f3c25e584558949b1eda38ded76eade28fa5fd6"
+  }
 
   -- tools
   -- use "cdelledonne/vim-cmake"

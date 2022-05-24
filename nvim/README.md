@@ -97,8 +97,8 @@
 
 | 快捷键          | 功能         |
 | --------------- | ------------ |
-| `<leader>` + hj | 下一个hunk   |
-| `<leader>` + hk | 上一个hunk   |
+| `<leader>` + j | 下一个hunk   |
+| `<leader>` + k | 上一个hunk   |
 | `<leader>` + hs | stage hunk   |
 | `<leader>` + hu | unstage hunk |
 | `<leader>` + hr | reset hunk   |
