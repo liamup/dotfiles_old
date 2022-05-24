@@ -89,9 +89,10 @@ return packer.startup(function(use)
     tag = "nvim-0.6",
   }
   use {
-    "nvim-telescope/telescope-fzf-native.nvim",
-    run = "make",
+    'nvim-telescope/telescope-fzf-native.nvim',
+    run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build'
   }
+
   -- use {
   --   "nvim-telescope/telescope-frecency.nvim",
   --   requires = {"tami5/sqlite.lua"}   -- NOTE: need to install sqlite lib
@@ -251,11 +252,11 @@ return packer.startup(function(use)
   use "j-hui/fidget.nvim" -- show lsp progress
   use "sindrets/winshift.nvim" -- rerange window layout
   -- litee family
-  use { 
+  use {
     "ldelossa/litee.nvim",
     commit = "47235cb807a83af866e06ce654b28efcfe347c60"
   }
-  use { 
+  use {
     "ldelossa/litee-calltree.nvim",
     commit = "3f3c25e584558949b1eda38ded76eade28fa5fd6"
   }
