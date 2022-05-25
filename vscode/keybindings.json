@@ -68,6 +68,7 @@
 				"search.focus.nextInputBox",
 				"search.focus.nextInputBox",
 				"search.focus.nextInputBox",
+        "list.focusFirst",
 			]
 		},
 		"when": "hasSearchResult || inSearchEditor"
