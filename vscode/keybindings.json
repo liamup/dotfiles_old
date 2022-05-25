@@ -68,7 +68,7 @@
 				"search.focus.nextInputBox",
 				"search.focus.nextInputBox",
 				"search.focus.nextInputBox",
-        "list.focusFirst",
+				"list.focusFirst",
 			]
 		},
 		"when": "hasSearchResult || inSearchEditor"
@@ -234,10 +234,21 @@
 		"args": {
 			"sequence": [
 				"list.select",
+				// "workbench.action.togglePanel"
+			]
+		},
+		"when": "panelFocus && !inDebugRepl && activePanel!='workbench.panel.markers' && reference-list.source == 'callHierarchy' "
+	},
+	{ // do not close debug view when press enter
+		"key": "enter",
+		"command": "extension.multiCommand.execute",
+		"args": {
+			"sequence": [
+				"list.select",
 				"workbench.action.togglePanel"
 			]
 		},
-		"when": "panelFocus && !inDebugRepl && activePanel!='workbench.panel.markers'"
+		"when": "panelFocus && !inDebugRepl && activePanel!='workbench.panel.markers' && reference-list.source != 'callHierarchy' "
 	},
 	{ // select file to open
 		"key": "l",
