@@ -11,7 +11,7 @@
 
 >建议：在[此处](https://github.com/neovim/neovim/releases)手动下载可执行文件。 通过类似 `apt` 的方式安装往往都是旧版本，arch系下载的又会过新。
 
-- gcc, cmake, make, fd, rg, glow, lazygit
+- gcc, cmake, make, fd, rg, glow, lazygit, global
 
 > ubuntu20.04的 fd, rg, glow, lazygit 已放在本仓库的bin目录下, 其余发行版请自行安装。
 
