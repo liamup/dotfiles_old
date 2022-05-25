@@ -1,8 +1,23 @@
-# Neovim 配置
+## Neovim 配置
 
-**neovim 版本： 目前仅在0.7.0 版本测试通过， 其余版本请自行测试**
+个人neovim配置仓库，视频演示可查看[此处](https://www.bilibili.com/video/BV1WY411P736?spm_id_from=333.999.0.0)
+
+
+## 要求
+
+本配置依赖如下环境:
+
+- neovim 版本=0.7
 
 >建议：在[此处](https://github.com/neovim/neovim/releases)手动下载可执行文件。 通过类似 `apt` 的方式安装往往都是旧版本，arch系下载的又会过新。
+
+- gcc, cmake, make, fd, rg, glow, lazygit
+
+> ubuntu20.04的 fd, rg, glow, lazygit 已放在本仓库的bin目录下, 其余发行版请自行安装。
+
+## 安装
+
+**安装过程中如遇任何问题，首先查看FAQ，如仍未能解决，可加入 QQ群:728502470 反馈**
 
 使用方法：
 
@@ -18,7 +33,7 @@
 
 4.通过`DIInstall xxx`命令安装对应语言的 `debugger`, 除此外，需要在 `~/.dotfiles/nvim/lua/user/dap/`目录下新建对应语言的配置文件（已配置好c/cpp,go,python), 同时更新 `dap-config.lua` 文件下的 `config_debuggers()` 函数。
 
-# 常用快捷键说明
+## 常用快捷键说明
 
 > 注意：随着个人使用习惯的改变，快捷键可能会有所更改。但保证在commit=c1582d31f328f60445642daecbca9ca75ad2b087 时生效。 
 >
@@ -31,7 +46,7 @@
 
 个人 `leader `键位设置为分号`;`
 
-## 1. 文件目录 
+### 1. 文件目录 
 
 | 快捷键         | 功能                         |
 | -------------- | ---------------------------- |
@@ -50,7 +65,7 @@
 
 更多快捷键见 nvim-tree.lua 顶部注释
 
-## 2. 常规动作
+### 2. 常规动作
 
 | 快捷键             | 功能                                                         |
 | ------------------ | ------------------------------------------------------------ |
@@ -68,7 +83,7 @@
 | `<leader>` + q     | 关闭窗口                                                     |
 | `<leader>` + D     | 关闭buffer                                                   |
 
-## 3. 代码导航
+### 3. 代码导航
 
 | 快捷键          | 功能                                                         |
 | --------------- | ------------------------------------------------------------ |
@@ -85,7 +100,7 @@
 | `<space>` + s   | 搜索当前窗口下的符号 (类似vscode的 `@`)                      |
 | `<space>` + S   | 搜索项目下的符号 (类似vscode `#`)                            |
 
-## 4. 代码诊断
+### 4. 代码诊断
 
 | 快捷键          | 功能                                |
 | --------------- | ----------------------------------- |
@@ -93,7 +108,7 @@
 | `<leader>`+ dk  | 上一个错误                          |
 | `<space>` + Td  | 错误窗口 （类似vscode problem pane) |
 
-## 5. Git操作
+### 5. Git操作
 
 | 快捷键          | 功能         |
 | --------------- | ------------ |
@@ -107,7 +122,7 @@
 | `<space>` + gf  | file history |
 | `<space>` + gg  | 打开lazygit  |
 
-## 6. Debug
+### 6. Debug
 
 | 快捷键          | 功能                                                         |
 | --------------- | ------------------------------------------------------------ |
@@ -120,7 +135,7 @@
 | `<F8>`          | stepout                                                      |
 | `<shift>` + k   | 变量悬浮窗（查看cursor下变量的值, 按两次`<shift>`+k使cursor聚焦到悬浮窗) |
 
-## 7. 其他
+### 7. 其他
 
 - cmake： `<space>` + c后，查看which key的提示
 - ultest: 单元测试插件， `<space>` + t
@@ -128,21 +143,7 @@
 - LocalHistory： 无快捷键， 执行 `:LocalHistoryToggle`查看
 - Lsp svr： `<space>`+li（小l和小i), 查看当前lsp状态， `<space>` + lI(小L和大I)安装lsp svr
 
-# 额外说明
-
-此仓库bin目录下包含如下可执行文件:
-- fd          -- telescope依赖
-- glow        -- markdown预览依赖
-- lazygit     -- git操作
-- rg          -- telescope 依赖
-
-
-# 交流
-
-**QQ交流群:728502470**
-
-
-# FAQ
+## FAQ
 
 **1.插件下载不下来？**
 
@@ -202,9 +203,9 @@ packer插件自动下载失败，网络问题。遇到此问题，可手动清�
 打开nerd font github 官网，想要的字体->Ligatures->字体样式（Bold, Italic, Medium, Regular都下载一份并安装)
 
 以JetBriansMono字体为例, 安装如下目录字体:
-![image-20220524184305412](https://cdn.JsDelivr.net/gh/ravenxrz/PicBed/img/image-20220524184305412.png)
+<img src="https://cdn.JsDelivr.net/gh/ravenxrz/PicBed/img/image-20220524184305412.png" alt="image-20220524184305412" style="zoom: 33%;" />
 
 打开windows设置，得到结果：
-![image-20220524184402745](https://cdn.JsDelivr.net/gh/ravenxrz/PicBed/img/image-20220524184402745.png)
+<img src="https://cdn.JsDelivr.net/gh/ravenxrz/PicBed/img/image-20220524184402745.png" alt="image-20220524184402745" style="zoom:33%;" />
 
 重新设置windows terminal字体并重启即可。
