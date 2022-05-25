@@ -71,7 +71,7 @@
 				"list.focusFirst",
 			]
 		},
-		"when": "hasSearchResult || inSearchEditor"
+		"when": "hasSearchResult && searchViewletFocus"
 	},
 	{ // focus on search input box
 		"key": "shift+tab",
@@ -84,7 +84,7 @@
 				"search.focus.previousInputBox",
 			]
 		},
-		"when": "hasSearchResult || inSearchEditor"
+		"when": "hasSearchResult && searchViewletFocus"
 	},
 	{
 		"key": "o",
@@ -564,5 +564,5 @@
 		"key": "tab",
 		"command": "-insertNextSuggestion",
 		"when": "hasOtherSuggestions && textInputFocus && !inSnippetMode && !suggestWidgetVisible && config.editor.tabCompletion == 'on'"
-	},
+	}
 ]
