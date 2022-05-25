@@ -486,13 +486,13 @@
 		},
 		{
 			"command": "workbench.view.search",
-			"key": "w",
+			"key": "F",
 			"name": "Search Word",
 			"type": "command"
 		},
 		{
 			"command": "search.action.openEditor",
-			"key": "F",
+			"key": "w",
 			"name": "New Search Editor",
 			"type": "command"
 		},
@@ -510,11 +510,13 @@
 		},
 	],
 	"window.zoomLevel": -1,
-	"workbench.colorTheme": "Catppuccin",
 	"workbench.colorTheme": "Visual Studio Light - C++",
 	"workbench.iconTheme": "vscode-icons",
 	"workbench.list.automaticKeyboardNavigation": false,
 	"workbench.panel.defaultLocation": "bottom",
 	"workbench.startupEditor": "newUntitledFile",
-	"go.enableCodeLens": {}
+	"hexeditor.columnWidth": 16,
+	"hexeditor.showDecodedText": true,
+	"hexeditor.defaultEndianness": "little",
+	"hexeditor.inspectorType": "aside"
 }

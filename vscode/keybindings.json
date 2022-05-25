@@ -58,6 +58,51 @@
 			],
 		}
 	},
+	// -----searching pane start------
+	{ // focus on searching result
+		"key": "tab",
+		"command": "extension.multiCommand.execute",
+		"args": {
+			"sequence": [
+				"search.focus.nextInputBox",
+				"search.focus.nextInputBox",
+				"search.focus.nextInputBox",
+				"search.focus.nextInputBox",
+			]
+		},
+		"when": "hasSearchResult || inSearchEditor"
+	},
+	{ // focus on search input box
+		"key": "shift+tab",
+		"command": "extension.multiCommand.execute",
+		"args": {
+			"sequence": [
+				"search.focus.previousInputBox",
+				"search.focus.previousInputBox",
+				"search.focus.previousInputBox",
+				"search.focus.previousInputBox",
+			]
+		},
+		"when": "hasSearchResult || inSearchEditor"
+	},
+	{
+		"key": "o",
+		"command": "list.select",
+		"when": "listFocus && !inputFocus && hasSearchResult && searchViewletFocus"
+	},
+	{
+		"key": "enter",
+		"command": "extension.multiCommand.execute",
+		"args": {
+			"sequence": [
+				"list.select",
+				"workbench.action.toggleAuxiliaryBar",
+			]
+		},
+		"when": "listFocus && !inputFocus && hasSearchResult && searchViewletFocus"
+	},
+	// -----searching pane end------
+	// -----file expoler start------
 	{ // open file expoler use which key
 		"key": "e",
 		"command": "whichkey.triggerKey",
@@ -96,6 +141,8 @@
 		"command": "list.focusUp",
 		"when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
 	},
+	// -----file expoler end------
+	// -----suggest item start------
 	{ // move down at auto completion prompt
 		"key": "ctrl+j",
 		"command": "selectNextSuggestion",
@@ -136,6 +183,7 @@
 		"command": "workbench.action.quickOpenNavigatePrevious",
 		"when": "inQuickOpen"
 	},
+	// -----suggest item end------
 	{ // open selected explorer item 
 		"key": "enter",
 		"command": "list.select",
@@ -504,5 +552,5 @@
 		"key": "tab",
 		"command": "-insertNextSuggestion",
 		"when": "hasOtherSuggestions && textInputFocus && !inSnippetMode && !suggestWidgetVisible && config.editor.tabCompletion == 'on'"
-	}
+	},
 ]
