@@ -26,6 +26,7 @@ M.setup = function()
     "nvim-biscuits",
     "nvim_context_vt",
     "filetype",
+    "distant",
   }
 
   local helper_set = {}
