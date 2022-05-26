@@ -60,39 +60,71 @@ end
 
 
 -- persist breakpoint
-HOME = os.getenv("HOME")
+local bp_base_dir = os.getenv("HOME") .. "/.cache/dap-breakpoint/"
 local breakpoints = require('dap.breakpoints')
 
-function M.store_breakpoints(clear)
+local function exists(file)
+  local ok, err, code = os.rename(file, file)
+  if not ok then
+    if code == 13 then
+      -- Permission denied, but it exists
+      return true
+    end
+  end
+  return ok, err
+end
+
+function M.store_breakpoints()
+  if not exists(bp_base_dir) then
+    os.execute("mkdir -p " .. bp_base_dir)
+  end
+
+  -- save current buffer breakpoints
   local bps = {}
   local breakpoints_by_buf = breakpoints.get()
   for buf, buf_bps in pairs(breakpoints_by_buf) do
-    bps[tostring(buf)] = buf_bps
+    if buf == vim.api.nvim_buf_get_number(0) then
+      bps[vim.api.nvim_buf_get_name(buf)] = buf_bps
+    end
   end
-  local fp = io.open('/tmp/breakpoints.json', 'w')
+
+  -- build bps json file
+  local buf_name = vim.api.nvim_buf_get_name(0)
+  buf_name = buf_name:gsub("/", "-")
+  local fp = io.open(bp_base_dir .. buf_name:sub(2, #buf_name) .. '.json', 'w')
+
+  -- write bps into json file
   local json_str = vim.fn.json_encode(bps)
-  if json_str ~= nil then 
+  if json_str ~= nil then
     fp:write(json_str)
   end
   fp:close()
 end
 
 function M.load_breakpoints()
-  local fp = io.open('/tmp/breakpoints.json', 'r')
+  -- build bps json file
+  local buf_name = vim.api.nvim_buf_get_name(0)
+  buf_name = buf_name:gsub("/", "-")
+  local fp = io.open(bp_base_dir .. buf_name:sub(2, #buf_name) .. '.json', 'r')
   if fp == nil then
     return
   end
+
+  -- read breakpoints from json file
   local content = fp:read('*a')
   local bps = vim.fn.json_decode(content)
-  for buf, buf_bps in pairs(bps) do
-    for _, bp in pairs(buf_bps) do
-      local line = bp.line
-      local opts = {
-        condition = bp.condition,
-        log_message = bp.logMessage,
-        hit_condition = bp.hitCondition
-      }
-      breakpoints.set(opts, tonumber(buf), line)
+  for bufname, buf_bps in pairs(bps) do
+    if vim.api.nvim_buf_get_name(0) == bufname then
+      local bufnr = vim.api.nvim_buf_get_number(0)
+      for _, bp in pairs(buf_bps) do
+        local line = bp.line
+        local opts = {
+          condition = bp.condition,
+          log_message = bp.logMessage,
+          hit_condition = bp.hitCondition
+        }
+        breakpoints.set(opts, bufnr, line)
+      end
     end
   end
 end
