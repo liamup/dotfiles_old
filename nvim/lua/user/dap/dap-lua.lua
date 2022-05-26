@@ -5,6 +5,7 @@ dap.configurations.lua = {
     type = 'nlua', 
     request = 'attach',
     name = "Attach to running Neovim instance",
+    cwd = '${workspaceFolder}',
     host = function()
       local value = vim.fn.input('Host [127.0.0.1]: ')
       if value ~= "" then
