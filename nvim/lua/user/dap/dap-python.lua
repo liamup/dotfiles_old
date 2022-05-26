@@ -15,7 +15,7 @@ dap.configurations.python = {
     program = "${file}", -- This configuration will launch the current file if used.
     args = function()
       local input = vim.fn.input("Input args: ")
-      return require("user.dap.dap-utils").str2argtable(input)
+      return require("user.dap.dap-util").str2argtable(input)
     end,
     pythonPath = function()
       local venv_path = os.getenv("VIRTUAL_ENV")
