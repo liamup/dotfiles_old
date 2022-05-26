@@ -1,5 +1,5 @@
 local M = {}
-local dap =  require'dap'
+local dap = require 'dap'
 
 -- refresh config
 M.reload_continue = function()
@@ -57,5 +57,43 @@ M.str2argtable = function(str)
   return arg_list
 end
 
+
+-- persist breakpoint
+HOME = os.getenv("HOME")
+local breakpoints = require('dap.breakpoints')
+
+function M.store_breakpoints(clear)
+  local bps = {}
+  local breakpoints_by_buf = breakpoints.get()
+  for buf, buf_bps in pairs(breakpoints_by_buf) do
+    bps[tostring(buf)] = buf_bps
+  end
+  local fp = io.open('/tmp/breakpoints.json', 'w')
+  local json_str = vim.fn.json_encode(bps)
+  if json_str ~= nil then 
+    fp:write(json_str)
+  end
+  fp:close()
+end
+
+function M.load_breakpoints()
+  local fp = io.open('/tmp/breakpoints.json', 'r')
+  if fp == nil then
+    return
+  end
+  local content = fp:read('*a')
+  local bps = vim.fn.json_decode(content)
+  for buf, buf_bps in pairs(bps) do
+    for _, bp in pairs(buf_bps) do
+      local line = bp.line
+      local opts = {
+        condition = bp.condition,
+        log_message = bp.logMessage,
+        hit_condition = bp.hitCondition
+      }
+      breakpoints.set(opts, tonumber(buf), line)
+    end
+  end
+end
 
 return M
