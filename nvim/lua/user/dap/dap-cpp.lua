@@ -1,31 +1,36 @@
 local dap = require('dap')
 
+local dbg_path = require("dap-install.config.settings").options["installation_path"] .. "ccppr_vsc/"
 dap.adapters.cppdbg = {
   id = 'cppdbg',
   type = "executable",
-  command = os.getenv('HOME') .. '/.config/nvim/lua/user/dap/debugger/ms-vscode.cpptools-1.7.1/debugAdapters/bin/OpenDebugAD7',
+  command = dbg_path .. "extension/debugAdapters/bin/OpenDebugAD7",
 }
 dap.configurations.cpp = {
--- launch exe
-{
+  -- launch exe
+  {
     name = "Launch file",
     type = "cppdbg",
     request = "launch",
     program = function()
       return vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
     end,
+    args = function()
+      local input = vim.fn.input("Input args: ")
+      return require("user.dap.dap-utils").str2argtable(input)
+    end,
     cwd = '${workspaceFolder}',
     stopOnEntry = true,
     setupCommands = {
-    {
-        description =  'enable pretty printing',
+      {
+        description = 'enable pretty printing',
         text = '-enable-pretty-printing',
         ignoreFailures = false
       },
     },
-},
--- attach process
-{
+  },
+  -- attach process
+  {
     name = "Attach process",
     type = "cppdbg",
     request = "attach",
@@ -35,15 +40,15 @@ dap.configurations.cpp = {
     end,
     cwd = "${workspaceFolder}",
     setupCommands = {
-    {
-        description =  'enable pretty printing',
+      {
+        description = 'enable pretty printing',
         text = '-enable-pretty-printing',
         ignoreFailures = false
       },
     },
-},
--- attach server
-{
+  },
+  -- attach server
+  {
     name = 'Attach to gdbserver :1234',
     type = 'cppdbg',
     request = 'launch',
@@ -56,7 +61,7 @@ dap.configurations.cpp = {
     setupCommands = {
       {
         text = '-enable-pretty-printing',
-        description =  'enable pretty printing',
+        description = 'enable pretty printing',
         ignoreFailures = false
       },
     },
@@ -65,6 +70,3 @@ dap.configurations.cpp = {
 
 -- setup other language
 dap.configurations.c = dap.configurations.cpp
-
-
-
