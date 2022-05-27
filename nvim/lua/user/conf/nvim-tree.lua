@@ -26,8 +26,8 @@
 -- <C-x> will open the file in a horizontal split
 -- <C-t> will open the file in a new tab
 -- <Tab> will open the file as a preview (keeps the cursor in the tree)
--- I will toggle visibility of hidden folders / files
--- H will toggle visibility of dotfiles (files/folders starting with a .)
+-- I will toggle visibility of hidden folders / files which are defined by gitignores
+-- D will toggle visibility of dotfiles (files/folders starting with a .)
 -- R will refresh the tree
 -- Double left click acts like <CR>
 -- Double right click acts like <C-]>
@@ -93,6 +93,8 @@ nvim_tree.setup({
         { key = "h", action = "close_node" },
         { key = "v", action = "vsplit" },
         { key = "O", action = "cd" },
+        { key = "H", action = "toggle_git_ignored" },
+        { key = "D", action = "toggle_dotfiles" },
       },
     },
   },

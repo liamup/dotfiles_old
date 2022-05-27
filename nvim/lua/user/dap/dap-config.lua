@@ -43,7 +43,7 @@ local function config_dapui()
     dap.repl.close()
     dapui.close()
     vim.api.nvim_command("DapVirtualTextDisable")
-    vim.api.nvim_command("bdelete! term:")   -- close debug temrinal
+    -- vim.api.nvim_command("bdelete! term:")   -- close debug temrinal
   end
 
   dap.listeners.after.event_initialized["dapui_config"] = function()
@@ -71,10 +71,12 @@ local function config_debuggers()
   require('dap.ext.vscode').load_launchjs(nil, { cppdbg = { 'cpp' } })
   -- config per launage
   -- require("user.dap.dap-cpp")
-  require("user.dap.di-cpp")
-  -- require("user.dap.dap-go")
-  require("user.dap.di-go")
-  require("user.dap.di-python")
+  -- require("user.dap.di-go")
+
+  require("user.dap.dap-cpp")
+  require("user.dap.dap-go")
+  require("user.dap.dap-python")
+  require("user.dap.dap-lua")
   -- require("user.dap.dap-cpp")
   -- require("config.dap.python").setup()
   -- require("config.dap.rust").setup()

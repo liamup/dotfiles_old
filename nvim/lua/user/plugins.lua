@@ -192,13 +192,13 @@ return packer.startup(function(use)
   use "ravenxrz/DAPInstall.nvim" -- help us install several debuggers
   use {
     "ravenxrz/nvim-dap",
-    commit = "f9480362549e2b50a8616fe4530deaabbc4f889b",
+    -- commit = "f9480362549e2b50a8616fe4530deaabbc4f889b",
   }
   use "theHamsta/nvim-dap-virtual-text"
   use "rcarriga/nvim-dap-ui"
   -- use "mfussenegger/nvim-dap-python"    -- debug python
   -- use { "leoluz/nvim-dap-go", module = "dap-go" } -- debug golang
-  -- use { "jbyuki/one-small-step-for-vimkind", module = "osv" } -- debug any Lua code running in a Neovim instance
+  use { "jbyuki/one-small-step-for-vimkind", module = "osv" } -- debug any Lua code running in a Neovim instance
 
   -- Git
   use {

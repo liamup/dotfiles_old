@@ -40,13 +40,19 @@ dap.configurations.go = {
     type = "go",
     name = "Debug",
     request = "launch",
-    program = "${file}"
+    cwd = '${workspaceFolder}',
+    program = "${file}",
+    args = function()
+      local input = vim.fn.input("Input args: ")
+      return require("user.dap.dap-util").str2argtable(input)
+    end,
   },
   {
     type = "go",
     name = "Debug test", -- configuration for debugging test files
     request = "launch",
     mode = "test",
+    cwd = '${workspaceFolder}',
     program = "${file}"
   },
   -- works with go.mod packages and sub packages
@@ -55,6 +61,7 @@ dap.configurations.go = {
     name = "Debug test (go.mod)",
     request = "launch",
     mode = "test",
+    cwd = '${workspaceFolder}',
     program = "./${relativeFileDirname}"
   },
 }
