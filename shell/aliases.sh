@@ -142,6 +142,9 @@ alias mirrorsite='wget -m -k -K -E -e robots=off'
 # Mirror stdout to stderr, useful for seeing data going through a pipe
 alias peek='tee >(cat 1>&2)'
 
+# clean window output
+alias clc="clear"
+
 # proxy config for wsl
 hostip=$(cat /etc/resolv.conf |grep -oP '(?<=nameserver\ ).*')
 alias setss='export all_proxy="socks5://${hostip}:7890";'
