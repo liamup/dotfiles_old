@@ -199,7 +199,11 @@ return packer.startup(function(use)
   -- use "mfussenegger/nvim-dap-python"    -- debug python
   -- use { "leoluz/nvim-dap-go", module = "dap-go" } -- debug golang
   use { "jbyuki/one-small-step-for-vimkind", module = "osv" } -- debug any Lua code running in a Neovim instance
-  use "sakhnik/nvim-gdb"
+  use {
+    "sakhnik/nvim-gdb",
+    commit="d7cf81eb62f12abbd527792b2bf24b77fff42acf",
+    run="./install.sh"
+  }
 
   -- Git
   use {
