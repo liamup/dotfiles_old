@@ -146,3 +146,13 @@ alias peek='tee >(cat 1>&2)'
 hostip=$(cat /etc/resolv.conf |grep -oP '(?<=nameserver\ ).*')
 alias setss='export all_proxy="socks5://${hostip}:7890";'
 alias unsetss='unset all_proxy'
+
+#  windows exec aliases
+# https://stackoverflow.com/questions/7131670/make-a-bash-alias-that-takes-a-parameter
+# NOTE: bash function can be called from shell command
+chrome() {
+  chrome.exe file://wsl.localhost/Ubuntu-20.04`pwd`/$1
+}
+
+alias opencwd="explorer.exe ."
+alias img="Honeyview.exe"
