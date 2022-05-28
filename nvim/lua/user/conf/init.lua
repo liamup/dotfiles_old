@@ -27,6 +27,7 @@ M.setup = function()
     "nvim_context_vt",
     "filetype",
     "distant",
+    "winshift",
   }
 
   local helper_set = {}

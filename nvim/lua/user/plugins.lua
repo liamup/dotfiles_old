@@ -201,8 +201,7 @@ return packer.startup(function(use)
   use { "jbyuki/one-small-step-for-vimkind", module = "osv" } -- debug any Lua code running in a Neovim instance
   use {
     "sakhnik/nvim-gdb",
-    commit="d7cf81eb62f12abbd527792b2bf24b77fff42acf",
-    run="./install.sh"
+    run = "./install.sh"
   }
 
   -- Git
@@ -228,7 +227,10 @@ return packer.startup(function(use)
   }
 
   -- use "folke/tokyonight.nvim"
-  use "kyazdani42/nvim-tree.lua" -- file explore
+  use {
+    "kyazdani42/nvim-tree.lua",
+    commit = "6abc87b1d92fc8223f1e374728ea45c848bfdf6d"
+  } -- file explore
   use {
     "akinsho/bufferline.nvim", -- tab
     tag = "v1.2.0",
