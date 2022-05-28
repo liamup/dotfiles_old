@@ -15,6 +15,8 @@ vim.cmd([[
     let g:nvimgdb_disable_start_keymaps = 1
     let g:nvimgdb_use_find_executables = 0
     let g:nvimgdb_use_cmake_to_find_executables = 0
+    let w:nvimgdb_termwin_command = "belowright vnew"
+    let w:nvimgdb_codewin_command = "vnew"
     let g:nvimgdb_config_override = {
       \ 'key_next': ';n',
       \ 'key_step': ';s',
@@ -30,11 +32,24 @@ vim.cmd([[
 -- ]])
 
 _G.StartGdbSession = function()
+  -- start gdb sessoin
   local exec_file = vim.fn.input('Path to executable: ', vim.fn.getcwd() .. '/', 'file')
   vim.api.nvim_command(":GdbStart gdb -q " .. exec_file)
-  vim.defer_fn(function()
-    vim.api.nvim_command(":Gdb source bps.txt")
-  end, 300)
+
+  -- restore breakpoints if possible
+  local utils = require("user.utils")
+  if utils.exists('.bps.txt') then
+    vim.defer_fn(function()
+      vim.api.nvim_command(":Gdb source .bps.txt")
+    end, 300)
+  end
+
+  -- create info locals window
+  vim.api.nvim_command(":rightbelow GdbCreateWatch info locals")
+  vim.api.nvim_command(":rightbelow GdbCreateWatch thread apply all bt")
+
+  -- move cursor back to gdb terminal
+  vim.api.nvim_command(":2 wincmd k")
 end
 
 _G.CreateWatch = function()
@@ -44,3 +59,5 @@ end
 
 vim.api.nvim_set_keymap("n", "<leader>dd", "<cmd>lua StartGdbSession()<cr>", {})
 vim.api.nvim_set_keymap("n", "<leader>dc", "<cmd>lua CreateWatch()<cr>", {})
+vim.api.nvim_set_keymap("n", "<leader>dbt", "<cmd>GdbLopenBacktrace<cr>", {})
+vim.api.nvim_set_keymap("n", "<leader>dbp", "<cmd>GdbLopenBreakpoints<cr>", {})

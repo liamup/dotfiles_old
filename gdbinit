@@ -1,4 +1,7 @@
-# 打印结构体
+
+# NOTE: 如果set print pretty on 不生效
+# 在 /usr/local/gdb/share/gdb 目录(gdb的安装目录)下, 创建软链接
+# ln -s /usr/share/gdb/auto-load auto-load 即可
 set print pretty on
 
 # 保存gdb历史命令
@@ -16,5 +19,5 @@ set logging on
 # 退出gdb quit
 define hook-quit
     set confirm off
-    save breakpoints bps.txt
+    save breakpoints .bps.txt
 end

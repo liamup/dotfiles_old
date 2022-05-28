@@ -62,20 +62,10 @@ end
 -- persist breakpoint
 local bp_base_dir = os.getenv("HOME") .. "/.cache/dap-breakpoint/"
 local breakpoints = require('dap.breakpoints')
-
-local function exists(file)
-  local ok, err, code = os.rename(file, file)
-  if not ok then
-    if code == 13 then
-      -- Permission denied, but it exists
-      return true
-    end
-  end
-  return ok, err
-end
+local utils = require("user.utils")
 
 function M.store_breakpoints()
-  if not exists(bp_base_dir) then
+  if not utils.exists(bp_base_dir) then
     os.execute("mkdir -p " .. bp_base_dir)
   end
 
