@@ -37,4 +37,10 @@ _G.StartGdbSession = function()
   end, 300)
 end
 
+_G.CreateWatch = function()
+  local watch_arg = vim.fn.input('Watch cmd: ')
+  vim.api.nvim_command(":GdbCreateWatch " .. watch_arg)
+end
+
 vim.api.nvim_set_keymap("n", "<leader>dd", "<cmd>lua StartGdbSession()<cr>", {})
+vim.api.nvim_set_keymap("n", "<leader>dc", "<cmd>lua CreateWatch()<cr>", {})
