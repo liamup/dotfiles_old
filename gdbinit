@@ -15,9 +15,9 @@ set logging on
 
 # macos 防卡住
 # set startup-with-shell off
-
 # 退出gdb quit
 define hook-quit
-    set confirm off
+    shell rm .bps.txt
     save breakpoints .bps.txt
+    set confirm off
 end
