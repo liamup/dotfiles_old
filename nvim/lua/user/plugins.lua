@@ -221,7 +221,6 @@ return packer.startup(function(use)
   -- use "navarasu/onedark.nvim"
   use({
     "catppuccin/nvim",
-    as = "catppuccin"
   })
   use {
     "projekt0n/github-nvim-theme",
@@ -291,8 +290,6 @@ return packer.startup(function(use)
   use "Pocco81/AutoSave.nvim"
   use "djoshea/vim-autoread"
   -- use "chipsenkbeil/distant.nvim"
-  
-
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

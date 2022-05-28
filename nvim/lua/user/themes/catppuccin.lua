@@ -1,5 +1,6 @@
 local status_ok, catppuccin = pcall(require, "catppuccin")
 if not status_ok then
+  vim.notify("catppuccin not found")
   return
 end
 
@@ -10,7 +11,7 @@ catppuccin.setup(
   styles = {    -- TODO: style setting doesn't work
     comments = "underline",
     functions = "bold",
-    keywords = "NONE",
+    keywords = "italic",
     strings = "underline",
     variables = "NONE",
   },
@@ -39,7 +40,7 @@ catppuccin.setup(
     telescope = true,
     nvimtree = {
       enabled = true,
-      show_root = false,
+      show_root = true,
       transparent_panel = false,
     },
     neotree = {
