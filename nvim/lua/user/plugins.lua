@@ -253,7 +253,8 @@ return packer.startup(function(use)
   use "norcalli/nvim-colorizer.lua" -- show color
   use "folke/trouble.nvim"
   use "j-hui/fidget.nvim" -- show lsp progress
-  use "sindrets/winshift.nvim" -- rerange window layout
+  -- use "sindrets/winshift.nvim" -- rerange window layout
+  use "simeji/winresizer"
   -- litee family
   use {
     "ldelossa/litee.nvim",

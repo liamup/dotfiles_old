@@ -43,7 +43,6 @@ tmux.setup({
     persist_zoom = false,
   },
   resize = {
-    -- NOTE: I use ctrl + (up/down/left/right) to resize window/pane instead
     -- enables default keybindings (A-hjkl) for normal mode
     enable_default_keybindings = false,
     -- sets resize steps for x axis
