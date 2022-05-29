@@ -14,16 +14,16 @@
 vim.cmd([[
     let g:nvimgdb_disable_start_keymaps = 1
     let g:nvimgdb_use_find_executables = 0
-    let g:nvimgdb_use_cmake_to_find_executables = 0
+    let g:nvimgdb_use_cmake_to_find_executables = 1
     let w:nvimgdb_termwin_command = "rightbelow vnew"
     let w:nvimgdb_codewin_command = "vnew"
     let g:nvimgdb_config_override = {
-      \ 'key_next': ';n',
-      \ 'key_step': ';s',
-      \ 'key_finish': ';f',
-      \ 'key_continue': ';c',
-      \ 'key_until': ';u',
-      \ 'key_breakpoint': ';b',
+      \ 'key_next': v:null,
+      \ 'key_step': v:null,
+      \ 'key_finish': v:null,
+      \ 'key_continue': v:null,
+      \ 'key_until': v:null,
+      \ 'key_breakpoint': v:null,
   \ }
 ]])
 
@@ -58,10 +58,6 @@ end
 _G.CreateWatch = function()
   local watch_arg = vim.fn.input('Watch cmd: ')
   vim.api.nvim_command(":GdbCreateWatch " .. watch_arg)
-end
-
-_G.SaveBreakpoints = function()
-  vim.api.nvim_command(":Gdb save breakpoints .bps.txt")
 end
 
 _G.CloseWatchBuffers = function()
