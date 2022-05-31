@@ -171,7 +171,7 @@ return packer.startup(function(use)
   -- use "terryma/vim-expand-region" -- expand/shrink region by +/-
   -- use "meain/vim-printer"
 
-  use "akinsho/toggleterm.nvim" -- toggle terminal
+  -- use "akinsho/toggleterm.nvim" -- toggle terminal
   use "ahmedkhalf/project.nvim" -- project manager
   use "lukas-reineke/indent-blankline.nvim" -- indent blankline
   use "folke/which-key.nvim" -- which  key

@@ -28,6 +28,7 @@ M.setup = function()
     "filetype",
     "distant",
     "winshift",
+    "toggleterm"
   }
 
   local helper_set = {}
