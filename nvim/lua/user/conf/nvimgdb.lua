@@ -14,16 +14,16 @@
 vim.cmd([[
     let g:nvimgdb_disable_start_keymaps = 1
     let g:nvimgdb_use_find_executables = 0
-    let g:nvimgdb_use_cmake_to_find_executables = 1
+    let g:nvimgdb_use_cmake_to_find_executables = 0
     let w:nvimgdb_termwin_command = "rightbelow vnew"
     let w:nvimgdb_codewin_command = "vnew"
     let g:nvimgdb_config_override = {
-      \ 'key_next': v:null,
-      \ 'key_step': v:null,
-      \ 'key_finish': v:null,
-      \ 'key_continue': v:null,
-      \ 'key_until': v:null,
-      \ 'key_breakpoint': v:null,
+      \ 'key_next': '-n',
+      \ 'key_step': '-s',
+      \ 'key_finish': '-f',
+      \ 'key_continue': '-c',
+      \ 'key_until': '-u',
+      \ 'key_breakpoint': '-b',
   \ }
 ]])
 
@@ -66,6 +66,7 @@ _G.CloseWatchBuffers = function()
   end, 10)
 end
 
+vim.api.nvim_set_keymap("n", "<leader>dr", "<cmd>GdbStart gdbr<cr>", {})
 vim.api.nvim_set_keymap("n", "<leader>dd", "<cmd>lua StartGdbSession()<cr>", {})
 vim.api.nvim_set_keymap("n", "<leader>dc", "<cmd>lua CreateWatch()<cr>", {})
 vim.api.nvim_set_keymap("n", "<leader>dbt", "<cmd>GdbLopenBacktrace<cr>", {})
