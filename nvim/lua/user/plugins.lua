@@ -99,8 +99,8 @@ return packer.startup(function(use)
   -- }
   use "nvim-telescope/telescope-ui-select.nvim"
   use "nvim-telescope/telescope-rg.nvim"
-  use "MattesGroeger/vim-bookmarks"
-  use "tom-anders/telescope-vim-bookmarks.nvim"
+  -- use "MattesGroeger/vim-bookmarks"
+  -- use "tom-anders/telescope-vim-bookmarks.nvim"
   use "nvim-telescope/telescope-dap.nvim"
 
   -- Treesittetr
@@ -114,9 +114,9 @@ return packer.startup(function(use)
     commit = "c81382328ad47c154261d1528d7c921acad5eae5",
   } -- enhance texetobject selection
   use "romgrk/nvim-treesitter-context" -- show class/function at the top
-  -- use "m-demare/hlargs.nvim"
-  -- use "SmiteshP/nvim-gps" -- statusline shows class structure
-  use "andymass/vim-matchup"
+  -- -- use "m-demare/hlargs.nvim"
+  -- -- use "SmiteshP/nvim-gps" -- statusline shows class structure
+  -- use "andymass/vim-matchup"
   -- use {
   --   "abecodes/tabout.nvim",
   --   wants = { 'vim-treesitter' }, -- or require if not used so far
@@ -152,9 +152,9 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-nvim-lsp"
   use "hrsh7th/cmp-nvim-lua"
   -- use "quangnguyen30192/cmp-nvim-tags"
-  use "jsfaint/gen_tags.vim"
-  use "ray-x/cmp-treesitter"
-  use "f3fora/cmp-spell" -- spell check
+  -- use "jsfaint/gen_tags.vim"
+  -- use "ray-x/cmp-treesitter"
+  -- use "f3fora/cmp-spell" -- spell check
   -- use "github/copilot.vim"  -- Copilot setup,
   -- use {
   --   "tzachar/cmp-tabnine", -- use ":CmpTabnineHub" command to login
@@ -163,7 +163,7 @@ return packer.startup(function(use)
   -- }
   use "ethanholz/nvim-lastplace" -- auto return back to the last modified positon when open a file
   -- use "BurntSushi/ripgrep" -- ripgrep
-  use "nvim-pack/nvim-spectre" -- search and replace pane
+  -- use "nvim-pack/nvim-spectre" -- search and replace pane
   -- use "haringsrob/nvim_context_vt" -- show if, for, function... end as virtual text
   -- use "code-biscuits/nvim-biscuits" -- AST enhance, require treesitter
   use "tpope/vim-repeat" --  . command enhance
@@ -172,7 +172,7 @@ return packer.startup(function(use)
   -- use "meain/vim-printer"
 
   -- use "akinsho/toggleterm.nvim" -- toggle terminal
-  use "ahmedkhalf/project.nvim" -- project manager
+  -- use "ahmedkhalf/project.nvim" -- project manager
   use "lukas-reineke/indent-blankline.nvim" -- indent blankline
   use "folke/which-key.nvim" -- which  key
   use {
@@ -246,7 +246,7 @@ return packer.startup(function(use)
   --   disable = true,
   -- }
   use "kevinhwang91/nvim-bqf" -- better quick fix
-  use "RRethy/vim-illuminate" -- highlight undercursor word
+  use "RRethy/vim-illuminate" -- highlight undercursor word   --  NOTE: 可能造成卡顿
   -- use "lewis6991/spellsitter.nvim" -- spell checker
   use "folke/todo-comments.nvim" -- todo comments
   -- use "liuchengxu/vista.vim"     -- outline
@@ -269,7 +269,7 @@ return packer.startup(function(use)
 
   -- tools
   -- use "cdelledonne/vim-cmake"
-  use "aserowy/tmux.nvim"
+  use "aserowy/tmux.nvim"   -- NOTE: 可能造成卡顿
   use "ravenxrz/neovim-cmake"
   use {
     "skanehira/preview-markdown.vim",

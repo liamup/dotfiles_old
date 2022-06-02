@@ -114,9 +114,9 @@ keymap("v", "p", '"_dP', opts)
 -- keymap("n", "<Space>f", "<cmd>lua require('telescope').extensions.frecency.frecency(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
 -- keymap("n", "<Space>F", "<cmd>Telescope live_grep<cr>", opts)
 
--- bookmark's
-keymap("n", "ma", "<cmd>Telescope vim_bookmarks current_file<cr>", opts)
-keymap("n", "mA", "<cmd>Telescope vim_bookmarks all<cr>", opts)
+-- bookmarks
+-- keymap("n", "ma", "<cmd>Telescope vim_bookmarks current_file<cr>", opts)
+-- keymap("n", "mA", "<cmd>Telescope vim_bookmarks all<cr>", opts)
 
 
 keymap("n", "<A-o>", "<cmd>ClangdSwitchSourceHeader<cr>", opts)
@@ -129,7 +129,7 @@ keymap("n", "<leader>in", "<cmd>lua vim.lsp.buf.incoming_calls()<cr>", opts)
 keymap("n", "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint(); require'user.dap.dap-util'.store_breakpoints(true)<cr>", opts)
 keymap("n", "<leader>dB", "<cmd>lua require'dap'.set_breakpoint(vim.fn.input '[Condition] > ')<cr>", opts)
 -- keymap("n", "<leader>dr", "lua require'dap'.repl.open()<cr>", opts)
-keymap("n", "<leader>dl", "lua require'dap'.run_last()<cr>", opts)
+keymap("n", "<F9>", "<cmd>lua require'dap'.run_last()<cr>", opts)
 keymap('n', '<F10>', '<cmd>lua require"user.dap.dap-util".reload_continue()<CR>', opts)
 keymap("n", "<F4>", "<cmd>lua require'dap'.terminate()<cr>", opts)
 keymap("n", "<F5>", "<cmd>lua require'dap'.continue()<cr>", opts)
