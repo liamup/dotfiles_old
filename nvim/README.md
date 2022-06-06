@@ -207,3 +207,9 @@ packer插件自动下载失败，网络问题。遇到此问题，可手动清�
 <img src="https://cdn.JsDelivr.net/gh/ravenxrz/PicBed/img/image-20220524184402745.png" alt="image-20220524184402745" style="zoom:33%;" />
 
 重新设置windows terminal字体并重启即可。
+
+**12. 提示GUN Global not found**
+
+两种解决方案：
+1. 安装global包即可
+2. 该依赖主要在c/c++开发中使用，不需要的去掉 `jsfaint/gen_tags.vim` 插件即可。
