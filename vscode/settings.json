@@ -22,6 +22,12 @@
 		"editor.insertSpaces": true,
 		"editor.tabSize": 4
 	},
+	"[css]": {
+		"editor.defaultFormatter": "vscode.css-language-features"
+	},
+	"[javascript]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
 	"C_Cpp.autocompleteAddParentheses": true,
 	"C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google}",
 	"C_Cpp.formatting": "Default",
@@ -80,7 +86,7 @@
 	"editor.suggestSelection": "first",
 	"editor.tabCompletion": "on",
 	"editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
-	"errorLens.enabled": true,
+	"errorLens.enabled": false,
 	"errorLens.enabledDiagnosticLevels": [
 		"error"
 	],
@@ -220,6 +226,17 @@
 		{
 			"before": [
 				"<leader>",
+				"g",
+				"q",
+			],
+			"commands": [
+				"workbench.action.closeEditorsInGroup"
+			]
+
+		},
+		{
+			"before": [
+				"<leader>",
 				"u"
 			],
 			"commands": [
@@ -313,7 +330,6 @@
 		{
 			"before": [
 				"<leader>",
-				"h",
 				"k"
 			],
 			"commands": [
@@ -324,7 +340,6 @@
 		{
 			"before": [
 				"<leader>",
-				"h",
 				"j"
 			],
 			"commands": [
@@ -515,8 +530,10 @@
 	"workbench.list.automaticKeyboardNavigation": false,
 	"workbench.panel.defaultLocation": "bottom",
 	"workbench.startupEditor": "newUntitledFile",
+	"go.enableCodeLens": {},
 	"hexeditor.columnWidth": 16,
 	"hexeditor.showDecodedText": true,
 	"hexeditor.defaultEndianness": "little",
-	"hexeditor.inspectorType": "aside"
+	"hexeditor.inspectorType": "aside",
+	"editor.wordWrap": "on"
 }
