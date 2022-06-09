@@ -27,16 +27,15 @@
     ~/.rtorrent.rc:
     ~/.shell:
     ~/.config/tmux: tmux
-    ~/.tmux.conf: tmux.conf
+    ~/.tmux.conf: tmux/tmux.conf
     ~/.vimrc:
     ~/.config/lazygit: lazygit
     ~/.config/nvim: nvim
-    ~/.config/clash: clash
     ~/.config/zellij: zellij
     ~/.config/alacritty: alacritty 
     ~/.vimrc_local:
     ~/.ideavimrc:
-    ~/.vsvimrc:
+    ~/.vsvimrc: vscode/vsvimrc
     ~/.zsh:
     ~/.zshrc:
     ~/.shell_local_before:
