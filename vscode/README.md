@@ -110,7 +110,15 @@
 | `<F7>`          | stepinto     |
 | `<F8>`          | stepout      |
 
-## 4. 其他
+
+## 4. FAQ
+
+**1. outline只能通过快捷键打开，无法关闭**
+
+目前的配置outline 只能放在secondary side bar中才能自动关闭, 可自行调整outline的快捷键配置。
+> hint: outline配置在 settings.json文件中， 搜索**outline**即可
+
+## 5. 其他
 
 - [neovim IDE配置](https://github.com/ravenxrz/dotfiles/tree/master/nvim)
 
