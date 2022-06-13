@@ -84,6 +84,7 @@ return packer.startup(function(use)
   use "kyazdani42/nvim-web-devicons" -- icons
 
   -- Telescope
+  use "nvim-telescope/telescope-live-grep-args.nvim"
   use {
     "nvim-telescope/telescope.nvim",
     tag = "nvim-0.6",
