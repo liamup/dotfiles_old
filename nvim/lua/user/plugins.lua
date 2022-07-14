@@ -284,11 +284,25 @@ return packer.startup(function(use)
   use "ravenxrz/vim-local-history"
   -- use "henriquehbr/nvim-startup.lua"
   -- use "AckslD/nvim-neoclip.lua"
+  
   use "vim-test/vim-test"
   use {
     "rcarriga/vim-ultest",
     run = ":UpdateRemotePlugins"
   }
+
+--[[
+--使用neotest代替vim-ultest，不会操作
+use {
+  "nvim-neotest/neotest",
+  requires = {
+    "nvim-lua/plenary.nvim",
+    "nvim-treesitter/nvim-treesitter",
+    "antoinemadec/FixCursorHold.nvim"
+  }
+}
+--]]
+
   use { 'michaelb/sniprun', run = 'bash ./install.sh' }
   -- use "ravenxrz/DoxygenToolkit.vim"
   use "Pocco81/AutoSave.nvim"
