@@ -29,11 +29,10 @@ keymap("n", "<C-W>m", ":WinShift<cr>", opts)
 -- keymap("n", "j", "<Plug>(accelerated_jk_gj)", opts)
 -- keymap("n", "k", "<Plug>(accelerated_jk_gk)", opts)
 
-
 -- FileExpoler
 -- keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 keymap("n", "<leader>f", "<cmd>lua vim.lsp.buf.formatting()<cr>", opts)
-keymap('v', '<leader>f', "<ESC><cmd>lua vim.lsp.buf.range_formatting()<CR>", opts)
+keymap("v", "<leader>f", "<ESC><cmd>lua vim.lsp.buf.range_formatting()<CR>", opts)
 -- no highlight
 keymap("n", "<leader>l", ":nohl<cr>", opts)
 -- save buffer
@@ -108,16 +107,14 @@ keymap("v", "p", '"_dP', opts)
 -- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
-
 -- keymap("n", "<leader>f", "<cmd>Telescope find_files<cr>", opts)
 -- keymap("n", "<Space>f", "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
 -- keymap("n", "<Space>f", "<cmd>lua require('telescope').extensions.frecency.frecency(require('telescope.themes').get_dropdown({ previewer = false }))<cr>", opts)
 -- keymap("n", "<Space>F", "<cmd>Telescope live_grep<cr>", opts)
 
 -- bookmarks
--- keymap("n", "ma", "<cmd>Telescope vim_bookmarks current_file<cr>", opts)
--- keymap("n", "mA", "<cmd>Telescope vim_bookmarks all<cr>", opts)
-
+keymap("n", "ma", "<cmd>Telescope vim_bookmarks current_file<cr>", opts)
+keymap("n", "mA", "<cmd>Telescope vim_bookmarks all<cr>", opts)
 
 keymap("n", "<A-o>", "<cmd>ClangdSwitchSourceHeader<cr>", opts)
 keymap("n", "<leader>u", "<cmd>Trouble lsp_references<cr>", opts)
@@ -126,11 +123,16 @@ keymap("n", "<leader>u", "<cmd>Trouble lsp_references<cr>", opts)
 keymap("n", "<leader>in", "<cmd>lua vim.lsp.buf.incoming_calls()<cr>", opts)
 
 -- debug
-keymap("n", "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint(); require'user.dap.dap-util'.store_breakpoints(true)<cr>", opts)
+keymap(
+	"n",
+	"<leader>db",
+	"<cmd>lua require'dap'.toggle_breakpoint(); require'user.dap.dap-util'.store_breakpoints(true)<cr>",
+	opts
+)
 keymap("n", "<leader>dB", "<cmd>lua require'dap'.set_breakpoint(vim.fn.input '[Condition] > ')<cr>", opts)
 -- keymap("n", "<leader>dr", "lua require'dap'.repl.open()<cr>", opts)
 keymap("n", "<F9>", "<cmd>lua require'dap'.run_last()<cr>", opts)
-keymap('n', '<F10>', '<cmd>lua require"user.dap.dap-util".reload_continue()<CR>', opts)
+keymap("n", "<F10>", '<cmd>lua require"user.dap.dap-util".reload_continue()<CR>', opts)
 keymap("n", "<F4>", "<cmd>lua require'dap'.terminate()<cr>", opts)
 keymap("n", "<F5>", "<cmd>lua require'dap'.continue()<cr>", opts)
 keymap("n", "<F6>", "<cmd>lua require'dap'.step_over()<cr>", opts)
@@ -141,8 +143,8 @@ keymap("n", "K", "<cmd>lua require'dapui'.eval()<cr>", opts)
 -- keymap("n", "<leader>dx", "<cmd>lua require'dap'.terminate()<cr>", opts)
 
 -- git diff view
-keymap('n', '<leader>j', ']c', opts)
-keymap('n', '<leader>k', '[c', opts)
+keymap("n", "<leader>j", "]c", opts)
+keymap("n", "<leader>k", "[c", opts)
 
 -- unit test
 keymap("n", "<leader>rr", "<cmd>UltestNearest<cr>", opts)
@@ -156,8 +158,7 @@ keymap("n", "<leader>rf", ":%SnipRun<cr>", opts)
 keymap("v", "<leader>rs", ":%SnipRun<cr>", opts)
 
 -- spell check
-vim.cmd(
-[[
+vim.cmd([[
   nnoremap <leader>s :call search('\w\>', 'c')<CR>a<C-X><C-S>
 ]])
 
