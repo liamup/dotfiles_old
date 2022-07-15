@@ -36,4 +36,8 @@ vim.cmd [[
     autocmd FileType c,cpp,go,python,lua :lua require('user.dap.dap-util').load_breakpoints()
   augroup end
 
+  augroup _auto_format
+    autocmd!
+    autocmd BufWritePost * :FormatWrite
+  augroup end
 ]]
