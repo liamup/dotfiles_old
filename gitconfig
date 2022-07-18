@@ -106,13 +106,14 @@
 
 [user]
 	useConfigOnly = true
-	email = zhang.xingrui@foxmail.com
-	name = ravenxrz
+	email = tiezhu@study.com
+	name = tiezhu
 
 [http]
 	cookieFile = ~/.gitcookies
 	postBuffer = 655360000
   ; proxy = socks5://127.0.0.1:7890
+  sslverify = false
 
 [https]
   ; proxy = socks5://127.0.0.1:7890

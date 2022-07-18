@@ -14,7 +14,7 @@
     # ~/.bashrc:
     # ~/.dotfiles: ''
     # ~/.gdbinit:
-    # ~/.gitconfig:
+    ~/.gitconfig:
     # ~/.cgdb:
     ~/.gitignore_global:
     # ~/.haskeline:
