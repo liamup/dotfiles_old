@@ -185,7 +185,7 @@
 		"when": "inQuickOpen"
 	},
 	// -----suggest item end------
-	{ // open selected explorer item 
+	{ // open selected explorer item
 		"key": "enter",
 		"command": "list.select",
 		"when": "explorerViewletVisible && filesExplorerFocus"

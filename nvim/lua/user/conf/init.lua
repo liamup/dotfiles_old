@@ -28,7 +28,7 @@ M.setup = function()
     "filetype",
     "distant",
     "winshift",
-    "toggleterm",
+    -- "toggleterm",
     "nvim-spectre",
   }
 

@@ -1,5 +1,7 @@
 local status_ok, toggleterm = pcall(require, "toggleterm")
+
 if not status_ok then
+  vim.notify('toggleterm not found')
 	return
 end
 
@@ -20,6 +22,8 @@ toggleterm.setup({
 	float_opts = {
 		border = "curved",
 		winblend = 3,
+    -- width = vim.o.columns - 10,
+    -- height = vim.o.lines - 5,
 		highlights = {
 			border = "Normal",
 			background = "Normal",
