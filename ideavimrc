@@ -5,7 +5,7 @@ set clipboard+=unnamed
 " 打开行号
 set number
 " 打开相对行号
-" set relativenumber
+set relativenumber
 " 设置命令历史记录条数
 set history=2000
 " 关闭兼容vi
