@@ -45,7 +45,7 @@
 
 个人 `leader `键位设置为分号`;`
 
-### 1. 文件目录 
+### 1. 文件目录
 
 | 快捷键         | 功能                         |
 | -------------- | ---------------------------- |
@@ -155,7 +155,7 @@ bin目录下的文件是一些依赖可执行文件，如果通过 `install` 命
 
 > mac建议使用iterm2, 或者kitty， 不建议使用默认终端。
 
-确认终端支持真彩色, 另外将 $TERM 环境变量设为 `xterm-256color`. 
+确认终端支持真彩色, 另外将 $TERM 环境变量设为 `xterm-256color`.
 
 **4.出现xxx not found**
 
@@ -181,12 +181,14 @@ packer插件自动下载失败，网络问题。遇到此问题，可手动清�
 
 **8. c/cpp项目如何导出 compile_commands.json 文件？**
 
-- makefile管理的项目： 使用 bear 工具（开源工具，自行下载），然后在项目工程下执行 `bear -- make` 
+- makefile管理的项目： 使用 bear 工具（开源工具，自行下载），然后在项目工程下执行 `bear -- make`
 - cmake管理的项目： 使用快捷键 `<space> + cg`
 
 **9. failed loading telescope.lua**
 
 确保所有插件均安装完成，如仍有该错误，打开telescope.lua, 注释掉最后几行的 `load_extesion(xxx)`
+
+telescope-fzf-native.nvim插件需要手动在`~/.local/share/nvim/site/pack/packer/start/telescope-fzf-native.nvim`路径下啊创建`build`文件夹，进行外部编译。
 
 **10. wsl nvim启动速度极慢，超过2s**
 
