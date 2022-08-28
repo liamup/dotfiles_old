@@ -285,8 +285,6 @@ return packer.startup(function(use)
 	-- use "henriquehbr/nvim-startup.lua"
 	-- use "AckslD/nvim-neoclip.lua"
 
-    use("tpope/vim-surround")
-
 	use("vim-test/vim-test")
 	use({
 		"rcarriga/vim-ultest",
