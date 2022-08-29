@@ -304,7 +304,7 @@ use {
 --]]
 
 	use({ "michaelb/sniprun", run = "bash ./install.sh" })
-	-- use "ravenxrz/DoxygenToolkit.vim"
+	use "ravenxrz/DoxygenToolkit.vim"
 	use("Pocco81/AutoSave.nvim")
 	use("djoshea/vim-autoread")
 	-- use "chipsenkbeil/distant.nvim"

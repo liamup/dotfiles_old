@@ -180,3 +180,7 @@ vim.cmd([[
 keymap("n", "<leader>U", ":lua require('user.utils').GtagsRefernce()<cr>", opts)
 -- find definition
 keymap("n", "<leader>T", ":lua require('user.utils').GtagsText()<cr>", opts)
+
+-- doxygenToolkit
+keymap("n", "<A-z>", ":DoxAuthor<CR>", opts)
+keymap("n", "<A-a>", ":Dox<CR>", opts)
