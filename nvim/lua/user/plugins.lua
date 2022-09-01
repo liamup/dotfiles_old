@@ -303,6 +303,9 @@ use {
 }
 --]]
 
+    -- rainbow
+    use("luochen1990/rainbow")
+
 	use({ "michaelb/sniprun", run = "bash ./install.sh" })
 	use "ravenxrz/DoxygenToolkit.vim"
 	use("Pocco81/AutoSave.nvim")
