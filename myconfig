@@ -1,0 +1,36 @@
+# oh-my-zsh plugins
+
+# plugins=(git
+#         zsh-autosuggestions
+#         zsh-syntax-highlighting
+#         autojump
+#         docker
+#         conda-zsh-completion
+# )
+
+
+# 打开windows文件资源管理器
+alias el="explorer.exe ."
+
+# 配置默认文本编辑器为nvim
+export EDITOR=/usr/bin/nvim
+
+# git log 等命令不重新打开新的页面
+git config --global core.pager ''
+
+alias gs="git status"
+alias gc="git commit -m "
+alias gl="git log"
+alias gll="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+alias gb="git branch"
+alias ga="git add -A"
+alias go="git checkout"
+alias gp="git push;git push github"
+
+alias condaw="conda.exe"
+
+#fzf配置
+export FZF_DEFAULT_OPTS="--height 60% --layout=reverse --preview '(highlight -O ansi {} || cat {}) 2> /dev/null | head -500'"
+function vf(){
+	nvim $(fzf)
+}
