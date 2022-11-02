@@ -261,11 +261,11 @@ return packer.startup(function(use)
 	-- litee family
 	use({
 		"ldelossa/litee.nvim",
-		commit = "47235cb807a83af866e06ce654b28efcfe347c60",
+		-- commit = "47235cb807a83af866e06ce654b28efcfe347c60",
 	})
 	use({
 		"ldelossa/litee-calltree.nvim",
-		commit = "3f3c25e584558949b1eda38ded76eade28fa5fd6",
+		-- commit = "3f3c25e584558949b1eda38ded76eade28fa5fd6",
 	})
 
 	-- tools
