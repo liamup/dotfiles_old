@@ -132,6 +132,7 @@
 	autocrlf = input
 	trustctime = false
 	attributesfile = ~/.attributes_global
+	pager = 
 
 # Allow local customizations in the .gitconfig_local file
 [include]

@@ -86,7 +86,7 @@ return packer.startup(function(use)
 	use("nvim-telescope/telescope-live-grep-args.nvim")
 	use({
 		"nvim-telescope/telescope.nvim",
-		tag = "nvim-0.6",
+		-- tag = "nvim-0.6",
 	})
 	use({
 		"nvim-telescope/telescope-fzf-native.nvim",
@@ -107,11 +107,11 @@ return packer.startup(function(use)
 	use({
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
-		commit = "44b7c8100269161e20d585f24bce322f6dcdf8d2",
+		-- commit = "44b7c8100269161e20d585f24bce322f6dcdf8d2",
 	})
 	use({
 		"nvim-treesitter/nvim-treesitter-textobjects",
-		commit = "c81382328ad47c154261d1528d7c921acad5eae5",
+		-- commit = "c81382328ad47c154261d1528d7c921acad5eae5",
 	}) -- enhance texetobject selection
 	use("romgrk/nvim-treesitter-context") -- show class/function at the top
 	-- -- use "m-demare/hlargs.nvim"
@@ -208,7 +208,7 @@ return packer.startup(function(use)
 	-- Git
 	use({
 		"lewis6991/gitsigns.nvim",
-		tag = "v0.4",
+		-- tag = "v0.4",
 	})
 	use("sindrets/diffview.nvim")
 	-- use "tanvirtin/vgit.nvim"
@@ -224,17 +224,17 @@ return packer.startup(function(use)
 	})
 	use({
 		"projekt0n/github-nvim-theme",
-		tag = "v0.0.4",
+		-- tag = "v0.0.4",
 	})
 
 	-- use "folke/tokyonight.nvim"
 	use({
 		"kyazdani42/nvim-tree.lua",
-		commit = "6abc87b1d92fc8223f1e374728ea45c848bfdf6d",
+		-- commit = "6abc87b1d92fc8223f1e374728ea45c848bfdf6d",
 	}) -- file explore
 	use({
 		"akinsho/bufferline.nvim", -- tab
-		tag = "v1.2.0",
+		-- tag = "v1.2.0",
 	})
 	-- use "moll/vim-bbye"
 	use("nvim-lualine/lualine.nvim") -- status line
@@ -308,7 +308,7 @@ use {
 
 	use({ "michaelb/sniprun", run = "bash ./install.sh" })
 	use "ravenxrz/DoxygenToolkit.vim"
-	use("Pocco81/AutoSave.nvim")
+	use("pocco81/auto-save.nvim")
 	use("djoshea/vim-autoread")
 	-- use "chipsenkbeil/distant.nvim"
 
