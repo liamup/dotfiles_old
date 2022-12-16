@@ -347,7 +347,7 @@
 				"editor.action.dirtydiff.next"
 			]
 		},
-		// git (un)stage 
+		// git (un)stage
 		{
 			"before": [
 				"<leader>",
