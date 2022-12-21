@@ -230,6 +230,7 @@ return packer.startup(function(use)
 	-- use "folke/tokyonight.nvim"
 	use({
 		"kyazdani42/nvim-tree.lua",
+        commit = "83d5ad41064a3a1ff98594fefffccf8b9a6cc3f0"
 		-- commit = "6abc87b1d92fc8223f1e374728ea45c848bfdf6d",
 	}) -- file explore
 	use({
