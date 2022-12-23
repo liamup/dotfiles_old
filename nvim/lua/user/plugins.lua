@@ -107,7 +107,7 @@ return packer.startup(function(use)
 	use({
 		"nvim-treesitter/nvim-treesitter",
 		run = ":TSUpdate",
-		-- commit = "44b7c8100269161e20d585f24bce322f6dcdf8d2",
+		commit = "4cccb6f494eb255b32a290d37c35ca12584c74d0",
 	})
 	use({
 		"nvim-treesitter/nvim-treesitter-textobjects",
@@ -221,6 +221,7 @@ return packer.startup(function(use)
 	-- use "navarasu/onedark.nvim"
 	use({
 		"catppuccin/nvim",
+        tag = "v0.2.4",
 	})
 	use({
 		"projekt0n/github-nvim-theme",
@@ -230,8 +231,7 @@ return packer.startup(function(use)
 	-- use "folke/tokyonight.nvim"
 	use({
 		"kyazdani42/nvim-tree.lua",
-        commit = "83d5ad41064a3a1ff98594fefffccf8b9a6cc3f0"
-		-- commit = "6abc87b1d92fc8223f1e374728ea45c848bfdf6d",
+		commit = "8603a2bcb756e3e3afc4fee226a4bdf70fa95e96",
 	}) -- file explore
 	use({
 		"akinsho/bufferline.nvim", -- tab
@@ -250,7 +250,8 @@ return packer.startup(function(use)
 	use("kevinhwang91/nvim-bqf") -- better quick fix
 	use("RRethy/vim-illuminate") -- highlight undercursor word   --  NOTE: 可能造成卡顿
 	-- use "lewis6991/spellsitter.nvim" -- spell checker
-	use("folke/todo-comments.nvim") -- todo comments
+	use({"folke/todo-comments.nvim",
+        commit = "7b8f174de9cac9d892c6ffda3778b1e4f4288d44",}) -- todo comments
 	-- use "liuchengxu/vista.vim"     -- outline
 	use("simrat39/symbols-outline.nvim") -- outline
 	-- use "stevearc/aerial.nvim"
