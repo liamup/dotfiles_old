@@ -1,0 +1,26 @@
+{
+    "c++常用头文件": {
+        "prefix": "cppi",
+        "body": [
+            "#include <iostream>",
+            "#include <vector>",
+            "#include <unordered_set>",
+            "",
+            "using namespace std;"
+        ],
+        "description": "c++常用头文件"
+    },
+    "c++链表": {
+        "prefix": "cpplb",
+        "body": [
+            "struct ListNode {",
+            "    int val;",
+            "    ListNode *next;",
+            "    ListNode() : val(0), next(nullptr) {}",
+            "    ListNode(int x) : val(x), next(nullptr) {}",
+            "    ListNode(int x, ListNode *next) : val(x), next(next) {}",
+            "};"
+        ],
+        "description": "c++链表"
+    }
+}
