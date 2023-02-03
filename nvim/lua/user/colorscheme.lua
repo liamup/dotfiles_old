@@ -4,7 +4,7 @@ require ("user.themes.github-nvim-theme")
 require ("user.themes.catppuccin")
 
 -- cursor color: #61AFEF
-local colorscheme = "catppuccin"
+local colorscheme = "tokyonight-night"
 -- local colorscheme = "darkplus"
 -- local colorscheme = "github_light"
 -- require "user.conf.github-nvim-theme"
