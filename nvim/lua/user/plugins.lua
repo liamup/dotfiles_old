@@ -305,7 +305,8 @@ use {
 --]]
 
     -- rainbow
-    use("luochen1990/rainbow")
+    -- use("luochen1990/rainbow")
+    use("p00f/nvim-ts-rainbow")
 
 	use({ "michaelb/sniprun", run = "bash ./install.sh" })
 	use "ravenxrz/DoxygenToolkit.vim"
