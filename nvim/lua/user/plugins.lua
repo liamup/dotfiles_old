@@ -157,11 +157,11 @@ return packer.startup(function(use)
 	-- use "ray-x/cmp-treesitter"
 	use("f3fora/cmp-spell") -- spell check
 	-- use "github/copilot.vim"  -- Copilot setup,
-	use({
-		"tzachar/cmp-tabnine", -- use ":CmpTabnineHub" command to login
-		after = "nvim-cmp",
-		run = "bash ./install.sh",
-	})
+	-- use({
+	-- 	"tzachar/cmp-tabnine", -- use ":CmpTabnineHub" command to login
+	-- 	after = "nvim-cmp",
+	-- 	run = "bash ./install.sh",
+	-- })
 	use("ethanholz/nvim-lastplace") -- auto return back to the last modified positon when open a file
 	-- use "BurntSushi/ripgrep" -- ripgrep
 	use "nvim-pack/nvim-spectre" -- search and replace pane
