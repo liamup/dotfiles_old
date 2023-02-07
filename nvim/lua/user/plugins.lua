@@ -220,7 +220,9 @@ return packer.startup(function(use)
 	use("lunarvim/colorschemes") -- A bunch of colorschemes you can try out
 	-- use "martinsione/darkplus.nvim"
 	-- use "navarasu/onedark.nvim"
-	use({
+	use("folke/tokyonight.nvim")
+
+    use({
 		"catppuccin/nvim",
         tag = "v0.2.4",
 	})

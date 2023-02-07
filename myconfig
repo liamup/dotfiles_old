@@ -34,3 +34,19 @@ export FZF_DEFAULT_OPTS="--height 60% --layout=reverse --preview '(highlight -O 
 function vf(){
 	nvim $(fzf)
 }
+
+# 快捷键
+alias q="exit"
+alias c="clear"
+
+# 命令简写
+alias cp="cp -r"
+alias rm="rm -rf"
+alias s="source ~/.zshrc"
+alias ns="nvim ~/.zshrc"
+alias rl="conda activate RL"
+
+# 快速打开软件
+alias n="nvim"
+alias lg="lazygit"
+alias r="ranger"
