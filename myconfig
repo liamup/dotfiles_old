@@ -46,5 +46,6 @@ alias s="source ~/.zshrc"
 
 # 快速打开软件
 alias n="nvim"
+alias t="tmux"
 alias lg="lazygit"
 alias r="ranger"
