@@ -90,7 +90,7 @@ local mappings = {
   -- ["q"] = { "<cmd>q!<CR>", "Quit" },
   -- ["/"] = { "<cmd>lua require('Comment').toggle()<CR>", "Comment" },
   ["C"] = { "<cmd>%bd|e#<CR>", "Close Other Buffers" },
-  -- ["h"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
+  ["q"] = { "<cmd>nohlsearch<CR>", "No Highlight" },
   ["f"] = {
     "<cmd>lua require('telescope.builtin').find_files()<cr>",
     -- "<cmd>lua require('telescope').extensions.frecenncy.frecency(require('telescope.themes').get_dropdown({ previewer = false }))<cr>",
