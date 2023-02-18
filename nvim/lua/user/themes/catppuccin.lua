@@ -83,7 +83,7 @@ catppuccin.setup(
 		},
 		markdown = true,
 		lightspeed = false,
-		ts_rainbow = false,
+		ts_rainbow = true,
 		hop = false,
 		notify = true,
 		telekasten = true,
