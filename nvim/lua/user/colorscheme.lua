@@ -19,7 +19,6 @@ end
 if colorscheme == "onedark" then
   require "user.themes.onedark"
 elseif colorscheme == "tokyonight" then
-  vim.notify ("hhhhhhh")
   require "user.themes.tokyonight"
 elseif colorscheme == "catppuccin" then
   require "user.themes.catppuccin"

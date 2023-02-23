@@ -43,8 +43,7 @@ vim.cmd [[
 
   augroup _auto_rainbow
     autocmd!
-    autocmd BufWritePre cpp :TSDisable rainbow
-    autocmd BufWritePre cpp :TSEnable rainbow
+    autocmd InsertLeave *.cpp :TSDisable rainbow
+    autocmd InsertLeave *.cpp :TSEnable rainbow
   augroup end
-
 ]]
