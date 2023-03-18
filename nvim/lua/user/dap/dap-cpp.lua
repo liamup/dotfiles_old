@@ -1,10 +1,11 @@
 local dap = require('dap')
 
-local dbg_path = require("dap-install.config.settings").options["installation_path"] .. "ccppr_vsc/"
+local _, mason_package = pcall(require, "mason-core.package")
+local mason_path = mason_package.get_install_path("cpptools")
 dap.adapters.cppdbg = {
   id = 'cppdbg',
   type = "executable",
-  command = dbg_path .. "extension/debugAdapters/bin/OpenDebugAD7",
+  command = mason_path .. "/cpptools/extension/debugAdapters/bin/OpenDebugAD7",
 }
 dap.configurations.cpp = {
   -- launch exe
