@@ -1,23 +1,7 @@
-
-# NOTE: 如果set print pretty on 不生效
-# 在 /usr/local/gdb/share/gdb 目录(gdb的安装目录)下, 创建软链接
-# ln -s /usr/share/gdb/auto-load auto-load 即可
-set print pretty on
-
-# 保存gdb历史命令
-set history save on
-
-# 开启log
-set logging file ./gdb.log
-set logging on
-
- set auto-load safe-path /
-
-# macos 防卡住
-# set startup-with-shell off
-# 退出gdb quit
-define hook-quit
-    shell rm .bps.txt
-    save breakpoints .bps.txt
-    set confirm off
-end
+# 配置`(gdb)`的颜色
+set prompt \033[35m(gdb)\033[0m
+# 红色：\033[31m
+# 绿色：\033[32m
+# 黄色：\033[33m
+# 洋红色：\033[35m
+# 青色：\033[36m
