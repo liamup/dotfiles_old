@@ -225,7 +225,7 @@ return packer.startup(function(use)
     use("folke/tokyonight.nvim")
 	use({
 		"projekt0n/github-nvim-theme",
-		-- tag = "v0.0.4",
+		tag = "v0.0.7",
 	})
 
 	-- use "folke/tokyonight.nvim"
