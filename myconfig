@@ -49,3 +49,5 @@ alias n="nvim"
 alias t="tmux"
 alias lg="lazygit"
 alias r="ranger"
+
+export CLANG_FORMAT_STYLE=file
