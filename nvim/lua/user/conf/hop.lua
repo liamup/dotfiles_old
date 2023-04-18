@@ -19,5 +19,6 @@ vim.api.nvim_set_keymap('', 'T', "<cmd>lua require'hop'.hint_char1({ direction =
 vim.api.nvim_set_keymap('n', '<leader><leader>w', "<cmd>HopWord<cr>", {})
 vim.api.nvim_set_keymap('n', '<leader><leader>j', "<cmd>HopLine<cr>", {})
 vim.api.nvim_set_keymap('n', '<leader><leader>k', "<cmd>HopLine<cr>", {})
-vim.api.nvim_set_keymap('n', 'qq', "<cmd>HopChar1<cr>", {})
+vim.api.nvim_set_keymap('n', 's', "<cmd>HopChar1<cr>", {})
+vim.api.nvim_set_keymap('n', 'S', "<cmd>HopWord<cr>", {})
 vim.api.nvim_set_keymap('n', '<leader><leader>s', "<cmd>HopChar1<cr>", {})
